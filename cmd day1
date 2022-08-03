@@ -1,0 +1,10 @@
+const express = require("express")
+
+const app = express()
+
+function db(req,res){
+        res.send("THis is app1 from DBots")
+}
+
+app.get("/data", db)
+app.listen(3000)
