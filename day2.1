@@ -1,0 +1,15 @@
+const express = require("express")
+
+const app = express()
+
+function dbhr(req,res){
+        res.send("THis is <b>hr</b>,  app1 from DBots")
+}
+
+function dbadmin(req,res){
+        res.send("THis is <b>admin</b>,  app1 from DBots")
+}
+app.get("/hr", dbhr)
+app.get("/admin", dbadmin)
+
+app.listen(3000)
