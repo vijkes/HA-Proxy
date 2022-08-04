@@ -1,0 +1,15 @@
+const express = require("express")
+
+const app = express()
+
+function dbtech(req,res){
+        res.send("THis is <b>tech</b>,  app1 from DBots")
+}
+
+function dbsec(req,res){
+        res.send("THis is <b>tech sec</b>,  app1 from DBots")
+}
+app.get("/tech", dbtech)
+app.get("/tech/security", dbsec)
+
+app.listen(4000)
