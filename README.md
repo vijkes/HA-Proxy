@@ -45,6 +45,9 @@
    32  ip a
 
    34  vim mylb.cfg
+   
    35  haproxy -f mylb.cfg -c
+   
+   36  node server.js &
 
    43  haproxy -f mylb.cfg
