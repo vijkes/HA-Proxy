@@ -5,6 +5,15 @@ frontend mylb
         mode http
 
 acl hr_home_app path -i -m end /hr/
+#use_backend myhrservers if hr_home_app
+
+#use_backend myhrservers if { path -i -m end /hr/ }
+
+#http-request deny if { path -i -m end /hr/ }
+
+#acl dataacl path_beg -i /data
+
+#use_backend mydataservers if dataacl
 
 acl tech_home_app path -i -m end /tech
 acl tech_sec_app path -i -m  beg /tech/security
