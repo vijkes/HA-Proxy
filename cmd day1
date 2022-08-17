@@ -8,3 +8,20 @@ function db(req,res){
 
 app.get("/data", db)
 app.listen(3000)
+
+
+===============================================================================================================
+
+frontend mylb
+        bind *:80
+        timeout client  10s
+        default_backend mynodeservers
+        
+backend mynodeservers
+        timeout connect 10s
+        timeout server 10s
+        server app1 <private_ip1>:3000
+        server app2 <private_ip2>:3000
+        server app3 <private_ip3>:3000
+        server app4 <private_ip4>:3000
+           
