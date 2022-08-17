@@ -36,7 +36,7 @@
 
    26  vim mylb.cfg
    
-   27  haproxy -f mylb.cfg -c   //check validity
+   27  haproxy -f mylb.cfg -c   
    
    28  ip addr
    
