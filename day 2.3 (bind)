@@ -1,0 +1,37 @@
+frontend mylb
+        bind *:80
+        timeout client 10s
+        default_backend hrservers
+        mode http
+
+acl hr_home_app path -i -m end /hr/
+
+acl tech_home_app path -i -m end /tech
+acl tech_sec_app path -i -m  beg /tech/security
+
+use_backend hrservers if hr_home_app
+use_backend techservers if tech_home_app
+
+
+# named based ACL
+#http-request deny if hr_admin_app
+#acl hr_admin_app path -i -m end /admin
+
+# inline based ACL
+http-request deny if { path -i -m end /admin }  ! { src 103.59.75.127 }
+
+
+
+backend hrservers
+        mode http
+        timeout connect 10s
+        timeout server 10s
+        server hrapp1 172.31.42.49:3000
+        server hrapp2 172.31.38.196:3000
+
+backend techservers
+        mode http
+        timeout connect 10s
+        timeout server 10s
+        server app1 172.31.36.192:4000
+        server app2 172.31.42.203:4000
