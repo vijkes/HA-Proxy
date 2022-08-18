@@ -1,6 +1,6 @@
 
 
-stats refresh 5s
+
 stateless vs statefull
 ==============================
 httpd		tcp
@@ -23,3 +23,6 @@ add to cart, chat app
 for stickness
 stick to first server 
 on going session
+
+
+stats refresh 5s
