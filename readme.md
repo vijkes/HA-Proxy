@@ -1,3 +1,6 @@
+
+
+stats refresh 5s
 stateless vs statefull
 ==============================
 httpd		tcp
