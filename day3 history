@@ -1,0 +1,24 @@
+    1  yum install haproxy
+    2  rpm -q haproxy
+    3   vim new.key
+
+   11  rpm -q haproxy
+   12  vim /etc/haproxy/haproxy.cfg
+   13  npm install express
+   14  history
+   15  node -e "console.log('Running Node.js ' + process.version)"
+   16  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   17  . ~/.nvm/nvm.sh
+   18  nvm install --lts
+   19  node -e "console.log('Running Node.js ' + process.version)"
+   20  mkdir /app
+   21  cd /app/
+   22  npm install express
+   
+  165  haproxy -f lbalgo.cfg -c
+  
+  167  haproxy -f lbalgo.cfg &
+
+  187  node server.js &
+ 
+ 
