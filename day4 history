@@ -1,0 +1,146 @@
+ 1  yum install haproxy -y
+    2  yum install vim net-tools -y
+    3  vim pri.cfg
+    4  haproxy -f pri.cfg -c
+    5  vim pri.cfg
+    6  haproxy -f pri.cfg -c
+    7  haproxy -f pri.cfg &
+    8  netstat -tnlp
+    9  vim pri.cfg
+   10  yum install keepalived -y
+   11  cd /etc/keepalived
+   12  ll
+   13  vim keepalived.conf
+   14  ll
+   15  mv keepalived.conf /tmp
+   16  ps aux | grep haproxy
+   17  pidof haproxy
+   18  jobs
+   19  fg
+   20  jobs
+   21  pidof haproxy
+   22  jobs
+   23  cd
+   24  ll
+   25  jobs
+   26  ll
+   27  haproxy -f pri.cfg &
+   28  cd /etc/keepalived/
+   29  ll
+   30  pidof haproxy
+   31  vim mykeep.conf
+   32  ifconfig
+   33  vim mykeep.conf
+   34  ifconfig
+   35  ping     172.168.29.29
+   36  ifconfig
+   37  vim mykeep.conf
+   38  systemctl status keepalived
+   39  systemctl start keepalived
+   40  systemctl status keepalived
+   41  journalctl -xe
+   42  ll
+   43  setenforce 0
+   44  systemctl start keepalived
+   45  vim mykeep.conf
+   46  systemctl start keepalived
+   47  getenforce 1
+   48  selinux
+   49  getenforce
+   50  setenforce 1
+   51  getenforce
+   52  systemctl start keepalived
+   53  ll /tmp
+   54  ll
+   55  cat mykeep.conf
+   56  mv mykeep.conf keepalived.conf
+   57  ll
+   58  systemctl start keepalived
+   59  systemctl status keepalived
+   60  ifconfig
+   61  ip a
+   62  curl 172.31.33.29:8008
+   63  curl 172.31.33.29:8080
+   64  curl 172.168.29.29:8080
+   65  ip a
+   66  ll
+   67  cat keepalived.conf
+   68  ip a
+   69  systemctl status keepalived
+   70  ifconfig
+   71  ip a
+   72  ip addr
+   73  ifconfig -a
+   74  ip a
+   75  jobs
+   76  fg
+   77  jobs
+   78  ip a
+   79  curl 172.31.33.29:8080
+   80  curl 172.31.35.114:8080
+   81  ping 172.168.29.29:8080
+   82  curl 172.168.29.29:8080
+   83  systemctl status keepalived
+   84  ip a
+   85  cd
+   86  haproxy -f pri.cfg -c
+   87  haproxy -f pri.cfg &
+   88  systemctl status keepalived
+   89  ip a
+   90  curl 172.31.33.29:8080
+   91  yum install minit
+   92  yum install monit
+   93  dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+   94  yum repo.list
+   95  yum install monit
+   96  cd /etc/
+   97  cd /etc/monit.d/
+   98  ll
+   99  vim m.conf
+  100  systemctl start monit
+  101  systemctl status monit
+  102  netstat -tnlp
+  103  ll
+  104  vim m.conf
+  105  systemctl restart monit
+  106*
+  107  systemctl restart monit
+  108  cat m.conf
+  109  vim m.conf
+  110  systemctl restart monit
+  111  cd /var/run
+  112  ll
+  113  ls
+  114  cat keepalived.pid
+  115  pwd
+  116  ll
+  117  cd /etc/keepalived/
+  118  ll
+  119  cd /etc/monit.d/
+  120  ll
+  121  vim m.conf
+  122  systemctl restart monit
+  123  vim m.conf
+  124  systemctl restart monit
+  125  l
+  126  ll
+  127  vim m.conf
+  128  systemctl restart monit
+  129  systemctl stop monit
+  130  systemctl restart monit
+  131  systemctl stop keepalive
+  132  systemctl stop keepalived
+  133  which keepalived
+  134  whereis keepalived
+  135  systemclt status keepalived
+  136  systemctl status keepalived
+  137  systemctl status monit
+  138  which ww df ad
+  139  which systemctl
+  140  vim m.conf
+  141  systemclt restart monit
+  142  systemctl restart monit
+  143  systemctl restart keepalived
+  144  systemctl status keepalived
+  145  ip a
+  146  history
