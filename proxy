@@ -1,0 +1,17 @@
+<h1>
+Proxy on apache>
+</h1>
+
+<VirtualHost *:80>
+   <Proxy balancer://mycluster>
+      BalancerMember http://172.31.32.119
+      BalancerMember http://172.31.38.246
+    </Proxy>
+    ProxyPreserveHost On
+    ProxyPass / balancer://mycluster/
+    ProxyPassReverse / balancer://mycluster/
+</VirtualHost>
+
+<h1>
+Proxy on nginx>
+</h1>
