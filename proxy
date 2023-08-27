@@ -1,6 +1,25 @@
-<h1>
-#Proxy on apache
-</h1>
+Proxy something that is working in your absence
+
+usually proxy means froward proxy
+this works from client side
+
+we have another kind of proxy called reverse proxy
+and it encrypts server side
+
+Proxy is an act which someone else does on your behalf.
+Proxy acts as a filter or as a firewall
+
+
+Firewall
+Better mgnt
+Security
+Caching
+Encrypt/decrypt
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proxy on apache
+/etc/httpd/conf.d/lb.conf
 
 <VirtualHost *:80>
    <Proxy balancer://mycluster>
@@ -11,7 +30,21 @@
     ProxyPass / balancer://mycluster/
     ProxyPassReverse / balancer://mycluster/
 </VirtualHost>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h1>
-#Proxy on nginx
-</h1>
+Proxy on nginx
+/etc/nginx/conf.d/nginx.conf
+
+upstream firstbackend {
+        server 172.31.32.119;
+        server 172.31.38.246;
+}
+
+server {
+        listen 80;
+        server_name localhost;
+
+        location / {
+        proxy_pass http://firstbackend;
+        }
+}
