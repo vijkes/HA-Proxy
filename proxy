@@ -1,5 +1,5 @@
 <h1>
-Proxy on apache>
+Proxy on apache
 </h1>
 
 <VirtualHost *:80>
@@ -13,5 +13,5 @@ Proxy on apache>
 </VirtualHost>
 
 <h1>
-Proxy on nginx>
+Proxy on nginx
 </h1>
